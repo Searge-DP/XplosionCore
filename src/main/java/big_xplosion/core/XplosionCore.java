@@ -1,5 +1,6 @@
 package big_xplosion.core;
 
+import big_xplosion.core.helper.ResourceHelper;
 import big_xplosion.core.lib.Reference;
 import big_xplosion.core.proxy.IProxy;
 import cpw.mods.fml.common.Mod;
@@ -16,6 +17,8 @@ public class XplosionCore {
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
 	public static IProxy proxy;
+
+	public static ResourceHelper resourceHelper = ResourceHelper.createResourceHelper(Reference.MOD_ID);
 
 	@Mod.EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
